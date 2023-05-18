@@ -58,10 +58,10 @@ export default Parent;
 
 // child.jsx
 import React from 'react';
-import Spin from 'sspin';
+import { SpinContext } from 'sspin';
 
 const Child = () => {
-  const { setSpin } = React.useContext(Spin.Context);
+  const { setSpin } = React.useContext(SpinContext);
 
   React.useEffect(() => {
     setTimeout(() => {
