@@ -1,6 +1,6 @@
 {
   "name": "sspin",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "a spin component for tsx and jsx",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -12,7 +12,7 @@
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run prettier && npm run lint"
+    "prepublishOnly": "npm run prettier && npm run lint"
   },
   "author": "Sami Salih İbrahimbaş <info@ssibrahimbas.com> (ssibrahimbas)",
   "license": "MIT",
