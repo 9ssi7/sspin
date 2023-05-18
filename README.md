@@ -109,7 +109,7 @@ const App = () => {
     <div>
       <Spin loading={true} spinner={<span>my spinner</span>}>
         content
-      </Spin.WithContext>
+      </Spin>
     </div>
   );
 };

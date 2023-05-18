@@ -1,6 +1,6 @@
 {
   "name": "sspin",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "a spin component for tsx and jsx",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
