@@ -1,6 +1,6 @@
 # Super SPIN
 
-Context-friendly spin library for React.
+Context-friendly, extensible and flex spin component for React
 
 ## Installation
 
