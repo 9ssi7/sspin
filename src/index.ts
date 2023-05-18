@@ -1,3 +1,3 @@
-export * from './Spin'
+export { default as default } from './Spin'
 export * from './SpinContext'
-export * from './Spinner'
+export { default as Spinner } from './Spinner'
