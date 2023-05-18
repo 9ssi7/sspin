@@ -7,22 +7,24 @@ type BaseProps = {
 }
 type Props = BaseProps & {
   loading: boolean
+  spinner?: React.ReactNode
 }
 
 type WithSpinProps = BaseProps & {
   value: boolean
+  spinner?: React.ReactNode
 }
 
 type SpinComponent = React.FC<Props> & {
   WithContext: React.FC<WithSpinProps>
 }
 
-const Spin: SpinComponent = ({ children, loading }: Props) => {
+const Spin: SpinComponent = ({ children, loading, spinner = <Spinner /> }: Props) => {
   return (
     <div className={`sspin-provider ${loading ? 'sspin-loading' : ''}`}>
       {loading && (
         <div className='sspin-overlay' role='status'>
-          <Spinner></Spinner>
+          {spinner}
         </div>
       )}
       {children}
@@ -30,13 +32,17 @@ const Spin: SpinComponent = ({ children, loading }: Props) => {
   )
 }
 
-const WithContext = ({ children, value }: WithSpinProps) => {
-  const [loading, setLoading] = useState(value)
+const WithContext = ({ children, value, spinner }: WithSpinProps) => {
+  const [spin, setSpin] = useState(value)
   return (
-    <SpinContext.Provider value={[loading, setLoading]}>
-      <Spin loading={loading}>{children}</Spin>
+    <SpinContext.Provider value={{ spin, setSpin }}>
+      <Spin loading={spin} spinner={spinner}>
+        {children}
+      </Spin>
     </SpinContext.Provider>
   )
 }
 
 Spin.WithContext = WithContext
+
+export default Spin

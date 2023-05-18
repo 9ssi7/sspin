@@ -1,3 +1,11 @@
 import { createContext } from 'react'
 
-export const SpinContext = createContext<[boolean, (value: boolean) => void]>([false, () => false])
+type SpinContextType = {
+  spin: boolean
+  setSpin: (value: boolean) => void
+}
+
+export const SpinContext = createContext<SpinContextType>({
+  spin: false,
+  setSpin: () => false,
+})
