@@ -21,6 +21,7 @@ yarn add sspin
 ```jsx
 import React from 'react';
 import Spin from 'sspin';
+import "sspin/dist/index.css";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ export default App;
 // parent.jsx
 import React from 'react';
 import Spin from 'sspin';
+import "sspin/dist/index.css";
 
 const Parent = () => {
   return (
@@ -80,6 +82,7 @@ const Child = () => {
 ```jsx
 import React from 'react';
 import Spin from 'sspin';
+import "sspin/dist/index.css";
 
 const App = () => {
   return (
@@ -99,6 +102,7 @@ or
 ```jsx
 import React from 'react';
 import Spin from 'sspin';
+import "sspin/dist/index.css";
 
 const App = () => {
   return (
