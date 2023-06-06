@@ -22,11 +22,9 @@ type SpinComponent = React.FC<Props> & {
 const Spin: SpinComponent = ({ children, loading, spinner = <Spinner /> }: Props) => {
   return (
     <div className={`sspin-provider ${loading ? 'sspin-loading' : ''}`}>
-      {loading && (
-        <div className='sspin-overlay' role='status'>
-          {spinner}
-        </div>
-      )}
+      <div className='sspin-overlay' role='status'>
+        {spinner}
+      </div>
       {children}
     </div>
   )
